@@ -1,10 +1,10 @@
 const config = {
   db: {
     /* don't expose password or any sensitive info, done only for demo */
-    host: "45.142.178.92",
-    user: "tls",
-    password: "debattieren_tls",
-    database: "debattieren_tls",
+    host: "localhost",
+    user: "nice_user_name",
+    password: "super_secret_pwd",
+    database: "my_database",
   },
   listPerPage: 50,
 };
