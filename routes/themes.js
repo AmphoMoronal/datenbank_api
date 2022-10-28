@@ -12,6 +12,16 @@ router.get('/', async function(req, res, next) {
   }
 });
 
+// GET one theme
+router.get('/:id', async function (req, res, next) {
+  try {
+    res.json(await themes.getOne(req.params.id));
+  } catch (err) {
+    console.error(`Error while getting themes `, err.message);
+    next(err);
+  }
+});
+
 // POST themes
 router.post('/', async function(req, res, next) {
   try {

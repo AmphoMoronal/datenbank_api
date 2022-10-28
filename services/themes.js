@@ -16,6 +16,17 @@ async function getMultiple(page = 1){
     }
 }
 
+async function getOne(id) {
+    const rows = await db.query(
+        `SELECT * FROM themes WHERE id=${id}`
+    );
+    const data = helper.emptyOrRows(rows);
+
+    return {
+        data
+    }
+}
+
 async function create(theme) {
     let sql = `INSERT INTO themes
     (title, description, added_by, created_at) 
@@ -51,5 +62,6 @@ async function remove(id){
 module.exports = {
     getMultiple,
     create,
-    remove
+    remove,
+    getOne
 }
