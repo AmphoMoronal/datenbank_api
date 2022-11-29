@@ -25,5 +25,5 @@ app.use((err, req, res, next) => {
 
 // Start server on the given port at the top
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Database API is listening at http://localhost:${port}`);
 });
